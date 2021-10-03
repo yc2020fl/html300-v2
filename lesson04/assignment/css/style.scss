@@ -1,0 +1,131 @@
+//colors
+$purple: #6e27c5;
+$blue: #150f96;
+$lightergray: #f6f5f6;
+$white: #ffffff;
+$lightgray: #d3d3d3;
+$darkgray: #717171;
+$green: #2b4c39;
+$pink: #d7b6c9;
+
+
+//insprational, original source of code for the navigation bar https://codepen.io/dicson/pen/ZpkNNE/
+@mixin navigation-option {
+  //the mouse change to a pointer and the nav link stays where it is
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  //the pink slide's style
+  &:after,
+  &:before {
+    content: '';
+    background: $pink;
+    border-radius: 5%;
+    height: 50%;
+    width: 0;
+    position: absolute;
+    transition: 2s cubic-bezier(.785,.135,.15,.86);
+  }
+  //insert the pink slide before and after the words on the top left and bottom right, and vice versa afterward
+  &:before {
+    top: 0;
+    left: 0;
+    right: auto;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    left: auto;
+  }
+  //the white background and green shadow after hover, also the pink slide
+  &:hover {
+    box-shadow: 5px 10px $green;
+    background: $white;
+    border-radius: 5%;
+    //make the whole block bigger
+    transform: scale(1.1);
+    //pink width showing up 10% on each side for left and right (before and after the words)
+    &:before {
+      width: 10%;
+      right: 0;
+      left: auto;
+    }
+
+    &:after {
+      width: 10%;
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $green;
+}
+
+//the nav in general | is pink, but more specifically nav a is green, no underline for link
+nav a {
+  text-decoration: none;
+  color: $green;
+}
+//set the style of the entire nav bar, pink color for font, lightgray for background
+//(font is green because nav a is set to green)
+//set padding larger enough to show the box-shadow, and enlarge the selected after hover
+
+nav {
+  font-size: 3em;
+  margin: 0.5em;
+  color: $pink;
+  padding: 0.4em;
+  background-color: $lightgray;
+  text-align: center;
+//text-transform: uppercase; (looks too heavy, but formal/sincere)
+}
+
+.link-nav {
+  &__1 {
+  @include navigation-option;
+}
+&__2 {
+@include navigation-option;
+}
+&__3 {
+@include navigation-option;
+}
+&__4 {
+@include navigation-option;
+}
+&__5 {
+@include navigation-option;
+}
+&__6 {
+@include navigation-option;
+}
+&__7 {
+@include navigation-option;
+}
+
+
+}
+
+.main {
+  background-color: $pink;
+  border-style: solid double double solid;
+  border-color: $white;
+  border-width: 0.5em;
+  color: $green;
+  font-size: 1.2em;
+  text-align: right;
+  display: flex;
+  //flex-wrap is to place words in a box, in a certain place
+  //create frame-like, maybe can use the same style for image later
+  flex-wrap: wrap;
+  margin: 1em 4em;
+  padding: 3em;
+  text-decoration: underline;
+}
