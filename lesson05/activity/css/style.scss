@@ -3,4 +3,84 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
+$blue: #00A3AD;
+$white: #FFFFFF;
+$darkgray: #707070;
+$nav-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$body-font-family: "Times New Roman", Times, serif;
+$font-family: Times;
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+//use BEM
+
+.main {
+  padding: 2rem;
+}
+
+.nav {
+  background-color: $blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 1em;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+
+  &-wrap {
+    max-width: 1920px;
+  }
+
+  &__login,
+  &__logo {
+    font-size: 28px;
+    color: $white;
+    font-family: font-family;
+    text-decoration: none;
+    margin: 0 auto 2rem;
+    width: 100%;
+    text-align: center;
+    @include media-query(tab) {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  &__login {
+    margin: 2rem auto 0;
+    @include media-query(tab) {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 20px;
+    font-family: $font-family;
+    margin-right: 2rem;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &-bar {
+    color: $white;
+  }
+}
