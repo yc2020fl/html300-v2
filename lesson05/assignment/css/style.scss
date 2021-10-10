@@ -168,7 +168,7 @@ header {
   padding: 0.5em;
   margin: 0.2em;
   @include media-query(mobile) {
-    height: 11em;
+    width: 100%;
   }
 }
 //enlarge image after hover
