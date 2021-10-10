@@ -4,3 +4,222 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+//color for test site
+$white: #FFFFFF;
+$red: #F1352B;
+$green: #7ACB00;
+$purple: #6E27C5;
+$orange: #FF6600;
+$blue: #150F96;
+$black: #1a0200;
+
+//colors for later
+$brown: #917368;
+$grimgray: #e5dcd7;
+$purple2: #666ad8;
+$bleachwhite: #fbecdb;
+$font-family: "Helvetica Neue", Helvetica, sans-serif;
+
+/*
+$blue: #166176;
+$orange: #e49b86;
+$white: #FFFFFF;
+$darkgray: #707070;
+$black: #1a0200;
+$bluegray: #495f72;
+$green: #a2b487;
+$purple: #5a4875;
+$nav-font-family: "Helvetica Neue", Helvetica, sans-serif;
+$body-font-family: "Times New Roman", Times, serif;
+$font-family: Times;
+*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+* {
+  color: $white;
+  text-align: center;
+}
+
+header {
+  background-color: $red;
+  padding: 1em;
+  color: $white;
+  text-align: center;
+}
+//to make sure no empty space between each section
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+//each item is in center and have space around it (do not go to the far left and right)
+
+.nav {
+  background-color: $green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  //total space the nav can take up to, when screen larger than 1900, it shows white space
+  &-wrap {
+    max-width: 1900px;
+  }
+  //codes can be use later on if have more to add, such as logo, login, etc.
+  /*
+  &__login,
+  &__logo {
+    font-size: 28px;
+    color: $white;
+    font-family: font-family;
+    text-decoration: none;
+    margin: 0 auto 2rem;
+    width: 100%;
+    text-align: center;
+    @include media-query(tab) {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  &__login {
+    margin: 2rem auto 0;
+    @include media-query(tab) {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  */
+  //apply styles to nav, and  nav bar is larger on smaller screen
+  //make sure the ast nav item is not too far from the side, set margin-right smaller
+  //font are bigger on smaller screen
+  &__item {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: $font-family;
+    margin-right: 2em;
+    @include media-query(mobile) {
+      margin: 0 1em;
+      width: auto;
+      font-size: 2em;
+      padding: 0.5em;
+    }
+
+    &:last-of-type {
+      margin-right: 1em;
+    }
+  }
+  //apply style to individual link
+  &-bar {
+    color: $white;
+    text-decoration: none;
+  }
+}
+//use grid for page layout, both side section and main section is taking up the same amount of space
+//on smaller screen, ony 1 section is showing at a time
+
+.grid-main {
+  display: grid; //maybe will take up same amount of space for the side-bar and main-section for later
+  //grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 30% 70%;
+  grid-column-gap: 0;
+  @include media-query(mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1em;
+  }
+}
+//use flex for section, organize content in coumns, set height so it takes up space
+
+.left-side-bar {
+  background-color: $purple;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5em;
+}
+//use flex for section, organize content in columns
+
+.right-main {
+  background-color: $orange;
+  padding: 1em;
+}
+//styles for the images in the right-main section, image on small screen is a bit larger
+.individual-painting-index img {
+  width: 90%;
+  height: 15em;
+  object-fit: cover;
+  border-radius: 35% 10%;
+  border: dashed;
+  border-color: $red;
+  padding: 0.5em;
+  margin: 0.2em;
+  @include media-query(mobile) {
+    height: 11em;
+  }
+}
+//enlarge image after hover
+img:hover {
+  transform: scale(1.1);
+}
+//have a red border around the entire section, so easier to apply styles later on
+.individual-painting-index {
+  border: solid;
+  border-color: $red;
+  padding: 0.5em;
+  margin: 0.1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  @include media-query(mobile) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+//style for each item inside right-main, each one has a figure, image, caption, p, link
+.individual-painting-index div {
+  background: $green;
+  padding: 1em 0.1em 0.1em;
+  margin: 1em;
+  width: 40%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+//give a color to the link so it is easier to see and access
+.individual-painting-index a {
+  padding: 0.2em;
+  background-color: $orange;
+  //the padding is bigger on smaller screen so easier to click on smaller screen
+  @include media-query(mobile) {
+    padding: 0.5em;
+    margin: 0.1em;
+  }
+}
+
+footer {
+  background-color: $blue;
+  padding: 1em;
+  font-size: 1.5em;
+}
+//take out the underline on link
+footer a {
+  text-decoration: none;
+}
