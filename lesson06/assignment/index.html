@@ -1,15 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+
+<!-- bundle -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+
+
+
+
+
+
+  <title>Assignment 06 - Bootstrap 4</title>
+</head>
+
+<body>
+  <header class="bg-secondary p-5">
+    <h1>Artworks & its Relationship to...</h1>
+  </header>
+
+<!-- bootstramp style: background color, padding, border color green, margin, and font size -->
+  <nav class="bg-light p-5 border border-success m-2 h1">
+    <div class="text-warning">
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="index.html">Home</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="artists.html">Artists</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="showcase.html">Portrayed</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="statistics.html">Statistics</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="blog.html">Blog</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- use grid for overall page, use flex for within; take up whole space when <576px screen;
+        use padding and margin for row to have space on top and bottom to differciate each section -->
+  <main class="main  bg-success">
+    <div class="row mt-5 mb-5">
+      <div class="col-xl-3 col-lg-3 col-sm-3 col-12 bg-success p-2 mt-2">
+        <h2 class="bg-warning">Females Artists</h2>
+        <ul>
+          <li>Berthe Morisot </li>
+          <li>Adélaïde Labille-Guiard</li>
+          <li>Rosa Bonheur</li>
+          <li>Mary Cassatt </li>
+        </ul>
+        <a href="artists.html" class="btn btn-light btn-sm active" data-toggle="tooltip" data-placement="right" title="Learn More about Artists" role="button" aria-pressed="true">See More</a>
+
+      </div>
+      <div class="col-xl-9 col-lg-9 col-sm-9 col-12 bg-danger p-2 mt-2">
+        <h2 class="bg-warning">Paintings</h2>
+        <ul>
+          <li>A Woman Seated at a Bench on the Avenue du Bois | 1885</li>
+          <li>Some Text</li>
+          <li>The Horse Fair | 1852–55</li>
+          <li>Madame Élisabeth de France (1764–1794) | ca. 1787 </li>
+          <li>Lydia Crocheting in the Garden at Marly | 1880</li>
+        </ul>
+        <a href="showcase.html" class="btn btn-light btn-sm active" data-toggle="tooltip" data-placement="right" title="See More Paintings" role="button" aria-pressed="true">See More</a>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- on large (xl, lg) screen,takes up smaller space, and center on smaller screen take up all the space -->
+  <section class="container-fluid col-xl-8 col-lg-8 col-sm-12 col-12 bg-success p-2 mt-5 mb-5" >
+    <div class="d-flex flex-row flex-wrap flex-sm-row flex-md-row flex-lg-row flex-xl-row">
+    <p class="m-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="m-2">Aenean vitae lacus cursus, rutrum sapien eget, sagittis orci.</p>
+    <p class="m-2">Etiam sollicitudin massa ac lacinia dapibus.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- to use tooltip, select the data-toggle -->
+
+<script>
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+
+
+</script>
+
+</body>
+
 </html>
