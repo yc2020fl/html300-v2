@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+  <title>Assignment 06 - Bootstrap 4</title>
+</head>
+
+<body>
+  <header>
+    <h1>Header</h1>
+  </header>
+  <nav class="bg-light p-5 border border-info border h1">
+    <div class="text-warning">
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="index.html">Home</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="artists.html">Artists</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="showcase.html">Portrayed</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="statistics.html">Statistics</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="blog.html">Blog</a> |
+        </li>
+        <li class="nav__item">
+          <a class="nav-bar text-decoration-none" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+<!-- left and right -->
+  <div class="row">
+    <div class="col-xl-4 col-lg-5 col-sm-6 col-12 bg-success p-5">
+
+<!-- some articles places at the left side -->
+      <ul class="bg-warning p-5">
+        <p>Through Their Lens</p>
+        <li><a href="https://www.artnews.com/art-news/retrospective/why-have-there-been-no-great-women-artists-4201/">From 1971: Why Have There Been No Great Women Artists?</a></li>
+        <li> <a href="https://youtu.be/MQtSDLOg05c">Alice Neel: They Are Their Own Gifts, 1978 | From the Vaults</a> </li>
+        <li> <a href="https://www.metmuseum.org/blogs/collection-insights/2021/womens-history-month-stories">10 Inspiring Stories of Women at The Met</a> </li>
+        <li> <a href="https://www.nytimes.com/2021/09/21/arts/women-artists.html">Art That Looks at What Women See</a> </li>
+      </ul>
+    </div>
+
+
+<!-- accordion for books recommendation in the MET, shows only the title of book,
+and click to view more details, click read more direct to the link. and also shows the book cover;
+book covers here is a thumnail, it has a border around it, to give it more professional, product kind of look -->
+
+<!-- for now, the accordion info is collapse show, it can be close when user click the button -->
+    <div class="col-xl-8 col-lg-7 col-sm-6 col-12 bg-success p-5">
+      <div id="accordion">
+        <h2 class="bg-dark text-light text-uppercase">Exhibits/Books/... </h2>
+
+<!-- first book under accordion -->
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Public Parks, Private Gardens: Paris to Provence
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <p> "Description
+                By Colta Ives
+
+                This catalogue accompanies The Metropolitan Museum of Art exhibition.
+
+                The spectacular transformation of Paris during the 19th century into a city of tree-lined boulevards and public parks both redesigned the capital and inspired the era's great Impressionist artists. The renewed landscape gave crowded,
+                displaced urban dwellers green spaces to enjoy, while suburbanites and country-dwellers began cultivating their own flower gardens. As public engagement with gardening grew, artists increasingly featured flowers and parks in their
+                work.
+
+                Public Parks, Private Gardens includes masterworks by artists such as Bonnard, Cassatt, Cézanne, Corot, Daumier, Van Gogh, Manet, Matisse, Monet, and Seurat. Many of these artists were themselves avid gardeners, and they painted parks
+                and gardens as the distinctive scenery of contemporary life. Writing from the perspective of both a distinguished art historian and a trained landscape designer, Colta Ives provides new insights not only into these essential works,
+                but also into this extraordinarily creative period in France's history.
+
+                Colta Ives is curator emerita in the Department of Drawings and Prints at The Metropolitan Museum of Art." <a href="https://store.metmuseum.org/public-parks-private-gardens-paris-to-provence-80040790" class="m-1">Read more</a></p>
+              <img src="https://store.metmuseum.org/media/catalog/product/8/0-12712-28570/public-parks-private-gardens-paris-to-provence.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=448&width=448&canvas=448:448" class="img-thumbnail rounded"
+                alt="Public Parks, Private Gardens: Paris to Provence">
+
+            </div>
+          </div>
+        </div>
+
+
+<!-- second book under accordion -->
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Art = Discovering Infinite Connections in Art History
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <p>"Coffee Table Book, Art History Book
+                Foreword by Max Hollein
+
+                Featuring more than 800 artworks from the collection of The Metropolitan Museum of Art, New York, this groundbreaking book—organized by thematic keywords rather than the usual chronological or geographical categories, and drawing upon
+                analytics from The Met's online Heilbrunn Timeline of Art History—offers up fresh, unconventional ways of engaging with visual culture. Beyond the wealth of illustration, more than 160 engaging curatorial essays place the works in
+                wider contexts, while a fold-out, detachable timeline offers further perspective.
+
+                The Met is one of the most important cultural institutions in the world and hosts more than six million visitors each year, with many millions more accessing its collection online. The Museum's director Max Hollein contributes the
+                foreword, while essays are written by the Museum's curatorial staff and other art experts." <a href="https://store.metmuseum.org/art-equals-discovering-infinite-connections-in-art-history-80047004" class="m-1">Read more</a></P>
+
+
+              <img src="https://store.metmuseum.org/media/catalog/product/a/r/art_equals_discovering_infinite_connections_in_art_history_80047004_02.jpg
+" class="img-thumbnail rounded" alt="Art = Discovering Infinite Connections in Art History">
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
